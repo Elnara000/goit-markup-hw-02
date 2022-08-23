@@ -22,22 +22,41 @@ hero-bgd #2F303A*/
     --logo-black: #000000; 
     --portfolio-buttons-filter-grey: #F5F4FA; 
     --hero-bgd: #2F303A;
+    --active-hero-button: #188CE8;
 
 }
 
 body{
     color: var(--primary-black-color);
-    text-decoration: none;
-    list-style-type: none;
     font-family: Roboto, sans-serif;
     font-weight: 500;
 }
 
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
 
 
 .web-blue {
     color: var(--brand-color);
 }
+
+.all-contacts li .nav-contacts{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+}
+
 
 .hero{
     background-color: var(--hero-bgd);
@@ -50,6 +69,7 @@ body{
     line-height: 1.36em;
     text-align: center;
     letter-spacing: 0.06em;
+    text-transform: uppercase;
 }
 
 .hero-button{
@@ -58,14 +78,13 @@ body{
     cursor: pointer;
     font-weight: 700;
     font-size: 16px;
-    Line-height: 1.87;
+    line-height: 1.87;
     letter-spacing: 0.06em;
     font-family: inherit;
 }
 
 .hero-button:focus, .hero-button:hover{
-    color: var(--primary-black-color);
-    background-color: var(--background-white-team);
+    background-color: var(--active-hero-button);
 }
 
 .team{
@@ -74,8 +93,8 @@ body{
 
 .team h2{
     font-weight: 700;
-    Font-size: 36px;
-    Line-height: 1.16;
+    font-size: 36px;
+    line-height: 1.16;
     letter-spacing: 0.03em;
 }
 
@@ -85,15 +104,15 @@ body{
 }
 
 .team-cards h3{
-    Font-size: 16px; 
-    Line-height: 1.18; 
+    font-size: 16px; 
+    line-height: 1.18; 
     letter-spacing: 0.03em;
 }
 
 .team-cards p{
     font-weight: 400;
-    Font-size: 16px;
-    Line-height: 1.18;
+    font-size: 16px;
+    line-height: 1.18;
     letter-spacing: 0.03em;
 }
 
@@ -129,26 +148,32 @@ body{
     background-color: var(--white-text-color);
    
 }
-.white-bgd li{list-style-type: none;}
+.white-bgd li{list-style-type: none;
+}
 
 .white-bgd h3{
-    Font-size: 14px;
-    Line-height: 1.14;
+    font-size: 14px;
+    line-height: 1.14;
     letter-spacing: 0.03em
+        
 }
 
 .white-bgd h2{
     font-weight: 700;
-    Font-size: 36px; 
-    Line-height: 1.16; 
+    font-size: 36px; 
+    line-height: 1.16; 
     letter-spacing: 0.03em;
 }
 
-.all-contacts, .white-bgd .text{
-    Font-size: 14px;
+.white-bgd .text-header{
+    text-transform: uppercase;
+}
+
+.all-contacts .contacts, .white-bgd .text{
+    font-size: 14px;
     font-weight: 400;
     line-height: 1.71; 
-    Letter-spacing: 0.03em
+    letter-spacing: 0.03em
 }
 
 .nav-logo-foot{
@@ -160,7 +185,7 @@ body{
     line-height: 1.19;
     letter-spacing: 0.03em
 }
-.nav-logo-foot:hover, .nav-logo-foot:focus{
+.nav-logo-foot:focus{
     color: var(--brand-color);
 }
 
@@ -173,7 +198,7 @@ body{
     line-height: 1.19;
     letter-spacing: 0.03em;
 }
-.navigation-logo:hover,
+
 .navigation-logo:focus{
     color: var(--brand-color);
 }
@@ -185,7 +210,10 @@ body{
 .location {
     color: var(--white-text-color);
     text-decoration: none;
-
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em
 }
 
 .location:hover,
@@ -204,7 +232,7 @@ body{
     list-style-type: none;
     font-size: 14px;
     line-height: 1.14;
-    letter-spacing: 0.02em
+    letter-spacing: 0.03em
 }
 
 .contacts:hover,
@@ -222,6 +250,7 @@ address{
     background-color: var(--background-white-team);
     cursor: pointer;
     font-family: inherit;
+    font-weight: inherit;
     
     
 }
